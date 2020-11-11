@@ -55,7 +55,7 @@ for a in cnts:
             pass
         else:
             x,y,w,h = cv2.boundingRect(c)
-            ROI = image[y:y+h, x:x+w]
+            ROI = image.copy()[y:y+h, x:x+w]
             ROI[:] = (255, 255, 255)
     x,y,w,h = cv2.boundingRect(a)
     ROIx = image[y:y+h, x:x+w]
