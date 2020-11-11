@@ -51,7 +51,7 @@ for c in contours:
 for a in cnts:
     
     for c in cnts:
-        if len(c) == len(a):
+        if cv2.contourArea(c) == cv2.contourArea(a):
             pass
         else:
             x,y,w,h = cv2.boundingRect(c)
